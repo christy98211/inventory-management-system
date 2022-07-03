@@ -1,0 +1,23 @@
+/* pagination styling */
+.float-right{
+    position: relative;
+    float: right;
+}
+#page_number_input{
+    width: 2.2rem;
+}
+
+/* hides element */
+.hidden{
+    display: none;
+}
+
+/* add + button styling */
+.add-image-button{
+    width: 40%;
+}
+
+/* remove element button styling */
+.mt-30{
+    margin-top: 30px;
+}

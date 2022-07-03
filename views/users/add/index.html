@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8" />
+  <title>RAAC Inventory management system</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="Themesusers" name="author" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="public/assets/images/favicon.ico">
+
+<!-- Responsive Table css -->
+<link href="public/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="public/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+<link href="public/assets/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css">
+<link href="public/assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+<link href="public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="public/assets/libs/@chenfengyuan/datepicker/datepicker.min.css">
+<%- include ('../../Partials/HeaderStyle.html')  %>
+
+
+</head>
+
+<body data-sidebar="dark">
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+    <%- include ('../../Partials/Header.html')  %>
+    <%- include ('../../Partials/Sidebar.html')  %>
+    <% var roleObj = roleData.assign_role[0] %>
+    <% if(roleObj.users.edit==false){ %>
+       <style>
+          .edit_users {
+             display: none;
+          }
+       </style>
+    <% } %>
+    <% if(roleObj.users.add==false){ %>
+      <style>
+         .add_users {
+            display: none;
+         }
+      </style>
+   <% } %>
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+            <%- include ('breadcrumb.html')  %>
+            <%- include ('add.html')  %>
+
+        </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+      </div>
+
+      <%- include ('../../Partials/extraModal.html')  %>
+      <%- include ('../../Partials/Footer.html') %>
+    </div>
+  </div>
+
+  <%- include ('../../Partials/Rightbar.html')  %>
+  <%- include ('../../Partials/FooterScript.html')  %>
+
+  <!-- Responsive Table js -->
+  <script src="public/assets/libs/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <script src="public/ajax/users/add.js"></script>
+
+  <script src="public/assets/libs/select2/js/select2.min.js"></script>
+  <script src="public/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="public/assets/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  <script src="public/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="public/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+  <script src="public/assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+
+  <!-- form advanced init -->
+  <script src="public/assets/js/pages/form-advanced.init.js"></script>
+  <!-- Init js -->
+  <script src="public/assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<% var roleObj = roleData.assign_role[0] %>
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <div id="sidebar-menu">
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <!-- <li class="menu-title">Menu</li> -->
+
+                <li>
+                    <a href="/" class="waves-effect">
+                        <i class="bx bx-home-circle"></i><span class="badge badge-pill badge-info float-right">01</span>
+                        <span> Dashboard </span>
+                    </a>
+                    <!-- <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="/">Dashboard</a></li> -->
+                        <!-- <li><a href="dashboard-saas">Saas</a></li>
+                        <li><a href="dashboard-crypto">Crypto</a></li>
+                        <li><a href="dashboard-blog">Blog</a></li> -->
+                    <!-- </ul> -->
+                </li>
+
+                <% if(roleObj.items.view==true){ %>
+                <li>
+                    <a href="items-list" class=" waves-effect">
+                        <i class="bx bx-face"></i>
+                        <span>Items</span>
+                    </a>
+                </li>
+                <% } %>
+
+                <% if(roleObj.product_category.view==true){ %>
+                    <li>
+                        <a href="category-list" class=" waves-effect">
+                            <i class="bx bxs-rectangle"></i>
+                            <span>Product Category</span>
+                        </a>
+                    </li>
+                    <% } %>
+
+                    <% if(roleObj.sales.view==true){ %>
+                        <li>
+                            <a href="sales-list" class=" waves-effect">
+                                <i class="bx bxs-rectangle"></i>
+                                <span>Sales</span>
+                            </a>
+                        </li>
+                        <% } %>
+
+                        <% if(roleObj.customers.view==true){ %>
+                            <li>
+                                <a href="customers-list" class=" waves-effect">
+                                    <i class="bx bxs-rectangle"></i>
+                                    <span>Customers</span>
+                                </a>
+                            </li>
+                            <% } %>
+                
+                <!-- <% if(roleObj.brand.view==true){ %>
+                <li>
+                    <a href="brand-list" class=" waves-effect">
+                        <i class="bx bx-face"></i>
+                        <span>Brand</span>
+                    </a>
+                </li>
+                
+                <% } %>
+                <% if(roleObj.location.view==true){ %>
+                <li>
+                    <a href="location-list" class=" waves-effect">
+                        <i class="bx bxs-city"></i>
+                        <span>Location</span>
+                    </a>
+                </li>
+                <% } %>
+                <% if(roleObj.state.view==true){ %>
+                    <li>
+                        <a href="state-list" class=" waves-effect">
+                            <i class="bx bxs-city"></i>
+                            <span>State</span>
+                        </a>
+                    </li>
+                <% } %>
+                
+                <% if(roleObj.country.view==true){ %>
+                    <li>
+                        <a href="country-list" class=" waves-effect">
+                            <i class="bx bxs-city"></i>
+                            <span>Country</span>
+                        </a>
+                    </li>
+                <% } %> -->
+               
+                <% if(roleObj.users.view==true){ %>
+                <li>
+                    <a href="users-list" class=" waves-effect">
+                        <i class="bx bxs-user"></i>
+                        <span>Admin Users</span>
+                    </a>
+                </li>
+                <% } %>
+               
+                <% if(roleObj.roles.view==true){ %>
+                <li>
+                    <a href="roles-list" class=" waves-effect">
+                        <i class="bx bx-user-plus"></i>
+                        <span>Roles</span>
+                    </a>
+                </li> 
+                <% } %>
+                
+               
+
+                
+                
+               
+
+            </ul>
+        </div>
+    </div>
+</div>

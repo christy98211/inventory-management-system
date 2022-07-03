@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8" />
+  <title>Skote - Nodejs Admin & Dashboard Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="Themesbrand" name="author" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="public/assets/images/favicon.ico">
+
+<!-- Responsive Table css -->
+<%- include ('../../Partials/HeaderStyle.html')  %>
+
+</head>
+
+<body data-sidebar="dark">
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+    <%- include ('../../Partials/Header.html')  %>
+    <%- include ('../../Partials/Sidebar.html')  %>
+    <% var roleObj = roleData.assign_role[0] %>
+    <% if(roleObj.location.edit==false){ %>
+       <style>
+          .edit_location {
+             display: none;
+          }
+       </style>
+    <% } %>
+    <% if(roleObj.location.add==false){ %>
+      <style>
+         .add_location {
+            display: none;
+         }
+      </style>
+   <% } %>
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+            <%- include ('breadcrumb.html')  %>
+            <%- include ('add.html')  %>
+
+        </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+      </div>
+
+      <%- include ('../../Partials/extraModal.html')  %>
+      <%- include ('../../Partials/Footer.html') %>
+    </div>
+  </div>
+
+  <%- include ('../../Partials/Rightbar.html')  %>
+  <%- include ('../../Partials/FooterScript.html')  %>
+
+  <!-- Responsive Table js -->
+  <script src="public/assets/libs/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <script src="public/ajax/location/add.js"></script>
+
+  <script src="public/assets/js/pages/form-element.init.js"></script>
+  <!-- Init js -->
+  <script src="public/assets/js/app.js"></script>
+
+</body>
+
+</html>

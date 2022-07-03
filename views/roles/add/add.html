@@ -1,0 +1,573 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Add Roles</h4>
+
+                <form>
+
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Role name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea id="textarea" class="form-control" maxlength="225" rows="3"
+                                    placeholder="This textarea has a limit of 225 chars."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="formrow-customCheck" checked>
+                            <label class="custom-control-label" for="formrow-customCheck">Is active</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h5 class="align-middle color-primary" scope="col">Content</h5>
+                                </li>
+                                <!-- <li class="list-inline-item">
+                                    <div class = "select_all_button">
+                                        <button type="button" id="selectAllRole" class="btn select_all_role" ><span>Select All</span></button>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="col-8 text-center">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5 class="align-middle color-primary m-0" scope="col">View</h5>
+                                    <!-- <button type="button" id="selectAllView" class="select_all_view btn btn-link" >
+                                        <span>Select All View</span>
+                                    </button> -->
+                                </div>
+                                <div class="col-3">
+                                    <h5 class="align-middle color-primary m-0" scope="col">Add</h5>
+                                    <!-- <button type="button" id="selectAllView" class="select_all_view btn btn-link" >
+                                        <span>Select All Add</span>
+                                    </button> -->
+                                </div>
+                                <div class="col-3">
+                                    <h5 class="align-middle color-primary m-0" scope="col">Edit</h5>
+                                    <!-- <button type="button" id="selectAllEdit" class="select_all_edit btn btn-link" >
+                                        <span>Select All Edit</span>
+                                    </button> -->
+                                </div>
+                                <div class="col-3">
+                                    <h5 class="align-middle color-primary m-0" scope="col">Delete</h5>
+                                    <!-- <button type="button" id="selectAllDelete" class="select_all_delete btn btn-link" >
+                                        <span>Select All Delete</span>
+                                    </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="roleManagement_section">
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="dashboard">Dashboard</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="dashboard_view">
+                                                        <label class="custom-control-label" for="dashboard_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="dashboard_add">
+                                                            <label class="custom-control-label" for="dashboard_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="dashboard_edit">
+                                                        <label class="custom-control-label" for="dashboard_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="dashboard_delete">
+                                                        <label class="custom-control-label" for="dashboard_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <!-- <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="brand">Brand</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="brand_view">
+                                                        <label class="custom-control-label" for="brand_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="brand_add">
+                                                            <label class="custom-control-label" for="brand_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="brand_edit">
+                                                        <label class="custom-control-label" for="brand_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="brand_delete">
+                                                        <label class="custom-control-label" for="brand_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="country">country</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="country_view">
+                                                        <label class="custom-control-label" for="country_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="country_add">
+                                                            <label class="custom-control-label" for="country_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="country_edit">
+                                                        <label class="custom-control-label" for="country_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="country_delete">
+                                                        <label class="custom-control-label" for="country_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="location">Location</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="location_view">
+                                                        <label class="custom-control-label" for="location_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="location_add">
+                                                            <label class="custom-control-label" for="location_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="location_edit">
+                                                        <label class="custom-control-label" for="location_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="location_delete">
+                                                        <label class="custom-control-label" for="location_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="state">State</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="state_view">
+                                                        <label class="custom-control-label" for="state_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="state_add">
+                                                            <label class="custom-control-label" for="state_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="state_edit">
+                                                        <label class="custom-control-label" for="state_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="state_delete">
+                                                        <label class="custom-control-label" for="state_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="roles">roles</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="roles_view">
+                                                        <label class="custom-control-label" for="roles_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="roles_add">
+                                                            <label class="custom-control-label" for="roles_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="roles_edit">
+                                                        <label class="custom-control-label" for="roles_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="roles_delete">
+                                                        <label class="custom-control-label" for="roles_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="product_category">Product Category</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="product_category_view">
+                                                        <label class="custom-control-label" for="product_category_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="product_category_add">
+                                                            <label class="custom-control-label" for="product_category_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="product_category_edit">
+                                                        <label class="custom-control-label" for="product_category_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="product_category_delete">
+                                                        <label class="custom-control-label" for="product_category_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="items">Items</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="items_view">
+                                                        <label class="custom-control-label" for="items_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="items_add">
+                                                            <label class="custom-control-label" for="items_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="items_edit">
+                                                        <label class="custom-control-label" for="items_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="items_delete">
+                                                        <label class="custom-control-label" for="items_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="sales">Sales</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="sales_view">
+                                                        <label class="custom-control-label" for="sales_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="sales_add">
+                                                            <label class="custom-control-label" for="sales_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="sales_edit">
+                                                        <label class="custom-control-label" for="sales_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="sales_delete">
+                                                        <label class="custom-control-label" for="sales_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="customers">Customers</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="customers_view">
+                                                        <label class="custom-control-label" for="customers_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="customers_add">
+                                                            <label class="custom-control-label" for="customers_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="customers_edit">
+                                                        <label class="custom-control-label" for="customers_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="customers_delete">
+                                                        <label class="custom-control-label" for="customers_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_row role_row">
+                                <div class="row p-2 border-top">
+                                    <div class="col-4">
+                                        <p class="align-middle font-weight-bold m-0 parent text-center" parent_key="users">Users</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_view" id="users_view">
+                                                        <label class="custom-control-label" for="users_view"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                        <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                            <input type="checkbox" class="custom-control-input chk_add" id="users_add">
+                                                            <label class="custom-control-label" for="users_add"></label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_edit" id="users_edit">
+                                                        <label class="custom-control-label" for="users_edit"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-row justify-content-center">
+                                                    <div class="custom-control custom-checkbox custom-checkbox-outline custom-checkbox-success mb-3">
+                                                        <input type="checkbox" class="custom-control-input chk_delete" id="users_delete">
+                                                        <label class="custom-control-label" for="users_delete"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- <div>
+                        <button type="submit" class="btn btn-primary w-md" id="add_master">Submit</button>
+                    </div> -->
+                    <%if(view == false){%>
+                        <div>
+                            <%if(update){%>
+                                <button type="submit" class="btn btn-primary w-md" id="edit_roles">UPDATE</button>
+                            <%}else{%>
+                                <button type="submit" class="btn btn-primary w-md" id="add_roles">ADD</button>
+                            <%}%>
+                        </div>
+                        <%}%>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

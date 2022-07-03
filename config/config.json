@@ -1,0 +1,36 @@
+{
+    "mongodb": {
+        "localhost": {
+            "url": "mongodb+srv://superadmin:admin12345@cluster0.nmm4g.mongodb.net/INVENTORY?retryWrites=true&w=majority",
+            "username": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": ""
+        },
+        "development": {
+            "url": "mongodb+srv://superadmin:admin12345@cluster0.nmm4g.mongodb.net/INVENTORY?retryWrites=true&w=majority",
+            "username": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": "",
+            "agendaConnectionString": "mongodb+srv://superadmin:admin12345@cluster0.nmm4g.mongodb.net/INVENTORY?retryWrites=true&w=majority",
+            "agendaCollection": "agendaJobs"
+        },
+        "staging": {
+            "username": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": ""
+        },
+        "production": {
+            "username": "",
+            "password": "",
+            "host": "",
+            "port": "",
+            "database": ""
+        }
+    }
+}
